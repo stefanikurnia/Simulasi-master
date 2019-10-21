@@ -20,6 +20,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var waveView: SwiftyWaveView!
     @IBOutlet weak var lyrics: UILabel!
     @IBOutlet weak var playButtonOutlet: UIButton!
+    @IBOutlet weak var vibrateSwitch: UISwitch!
+    @IBOutlet weak var vibrateSwitchLabel: UILabel!
     @IBOutlet weak var lyricsSwitch: UISwitch!
     @IBOutlet weak var lyricsSwitchLabel: UILabel!
     
@@ -43,8 +45,13 @@ class ViewController: UIViewController{
         trackTitle.text = "Laskar Pelangi"
         singerName.text = "Nidji"
         audioPlayer = initializePlayer()
-        lyricsSwitch.addTarget(self, action: #selector(lyricsChange), for: .valueChanged)
+        toggleSwitch()
         createEngine()
+    }
+    
+    func toggleSwitch(){
+        lyricsSwitch.addTarget(self, action: #selector(lyricsChange), for: .valueChanged)
+        vibrateSwitch.addTarget(self, action: #selector(vibrateChange), for: .valueChanged)
     }
     
     private func initializePlayer() -> AVAudioPlayer?
@@ -65,7 +72,6 @@ class ViewController: UIViewController{
                 audioPlayer?.pause()
                 isPlaying = false
                 waveView.stop()
-                
             } else
             {
                 isPlaying = true
@@ -89,6 +95,9 @@ class ViewController: UIViewController{
         playedTime.text = String(format: "%02d:%02d", minutes,seconds) as String
         
         //lyrics
+            if seconds >= 0 && seconds <= 9 {
+                lyrics.text = ""
+            }
             if seconds >= 10 && seconds <= 15
             {
                 lyrics.text = "Mimpi adalah kunci"
@@ -337,6 +346,14 @@ class ViewController: UIViewController{
         }else{
             lyricsSwitchLabel.text = "Lyrics is OFF"
             lyrics.isHidden = true
+        }
+    }
+    
+    @objc func vibrateChange(switchState: UISwitch){
+        if switchState.isOn{
+            vibrateSwitchLabel.text = "Vibrate is ON"
+        }else{
+            vibrateSwitchLabel.text = "Vibrate is OFF"
         }
     }
 }
