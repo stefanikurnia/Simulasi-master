@@ -23,9 +23,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wjo-of-Aj2">
-                                <rect key="frame" x="27" y="792" width="42" height="38"/>
+                                <rect key="frame" x="171" y="785" width="73" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Play"/>
+                                <state key="normal" image="playpause" catalog="system"/>
                                 <connections>
                                     <action selector="playButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rxX-op-qW5"/>
                                 </connections>
@@ -70,10 +70,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjx-ik-Tkn">
-                                <rect key="frame" x="0.0" y="608" width="414" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mjx-ik-Tkn">
+                                <rect key="frame" x="0.0" y="570" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -81,12 +81,26 @@
                                 <rect key="frame" x="54" y="156" width="307" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jsk-9c-ksz">
+                                <rect key="frame" x="20" y="663" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lyrics is ON" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oOc-D0-Qxo">
+                                <rect key="frame" x="86" y="668" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="lyrics" destination="Mjx-ik-Tkn" id="Myh-Dw-jm6"/>
+                        <outlet property="lyricsSwitch" destination="jsk-9c-ksz" id="utA-lB-aAI"/>
+                        <outlet property="lyricsSwitchLabel" destination="oOc-D0-Qxo" id="Fef-qU-8rB"/>
+                        <outlet property="playButtonOutlet" destination="wjo-of-Aj2" id="jdv-dO-tYw"/>
                         <outlet property="playedTime" destination="M4f-JW-L2Q" id="FED-d9-z2F"/>
                         <outlet property="singerName" destination="JPQ-mN-p4R" id="cNj-qK-L8L"/>
                         <outlet property="sliderProgress" destination="BzU-Sn-1jr" id="Xxa-2p-QOP"/>
@@ -101,7 +115,7 @@
     </scenes>
     <resources>
         <image name="Album" width="268" height="268"/>
-        <image name="Play" width="512" height="512"/>
         <image name="Stop" width="512" height="512"/>
+        <image name="playpause" catalog="system" width="64" height="40"/>
     </resources>
 </document>
