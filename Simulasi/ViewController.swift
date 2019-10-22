@@ -87,173 +87,63 @@ class ViewController: UIViewController{
         }
     }
     
-    @objc func updateTime()
-    {
+    @objc func updateTime(){
         let currentTime = Int(audioPlayer!.currentTime)
         let minutes = currentTime/60
         let seconds = currentTime - minutes * 60
         playedTime.text = String(format: "%02d:%02d", minutes,seconds) as String
         
         //lyrics
-            if seconds >= 0 && seconds <= 9 {
-                lyrics.text = ""
-            }
-            if seconds >= 10 && seconds <= 15
-            {
-                lyrics.text = "Mimpi adalah kunci"
-            }
-            if seconds >= 16 && seconds <= 20
-            {
-                lyrics.text = "Untuk kita menaklukkan dunia"
-            }
-            if seconds >= 21 && seconds <= 25
-            {
-                lyrics.text = "Berlarilah tanpa lelah"
-            }
-            if seconds >= 26 && seconds <= 30
-            {
-                lyrics.text = "Sampai engkau meraihnya"
-            }
-            if seconds >= 31 && seconds <= 36
-            {
-                lyrics.text = "Laskar pelangi"
-            }
-            if seconds >= 37 && seconds <= 42
-            {
-                lyrics.text = "Takkan terikat waktu"
-            }
-            if seconds >= 43 && seconds <= 47
-            {
-                lyrics.text = "Bebaskan mimpimu di angkasa"
-            }
-            if seconds >= 48 && seconds <= 54
-            {
-                lyrics.text = "Warnai bintang di jiwa"
-            }
-            if seconds >= 56 && seconds <= 59
-            {
-                lyrics.text = "Menarilah dan terus tertawa"
-            }
-            if minutes >= 1, seconds >= 1 && minutes <= 1, seconds <= 6
-            {
-                lyrics.text = "Walau dunia tak seindah surga"
-            }
-            if minutes >= 1, seconds >= 7 && minutes <= 1, seconds <= 11
-            {
-                lyrics.text = "Bersyukurlah pada Yang Kuasa"
-            }
-            if minutes >= 1, seconds >= 12 && minutes <= 1, seconds <= 17
-            {
-                lyrics.text = "Cinta kita di dunia"
-            }
-            if minutes >= 1, seconds >= 18 && minutes <= 1, seconds <= 18
-            {
-                lyrics.text = ""
-            }
-            if minutes >= 1, seconds >= 19 && minutes <= 1, seconds <= 23
-            {
-                lyrics.text = "Selamanya"
-            }
-            if minutes >= 1, seconds >= 24 && minutes <= 1, seconds <= 30
-            {
-                lyrics.text = ""
-            }
-            if minutes >= 1, seconds >= 31 && minutes <= 1, seconds <= 35
-            {
-                lyrics.text = "Cinta kepada hidup"
-            }
-            if minutes >= 1, seconds >= 36 && minutes <= 1, seconds <= 40
-            {
-                lyrics.text = "Memberikan senyuman abadi"
-            }
-            if minutes >= 1, seconds >= 41 && minutes <= 1, seconds <= 45
-            {
-                lyrics.text = "Walau hidup kadang tak adil"
-            }
-            if minutes >= 1, seconds >= 46 && minutes <= 1, seconds <= 53
-            {
-                lyrics.text = "Tapi cinta lengkapi kita"
-            }
-            if minutes >= 1, seconds >= 54 && minutes <= 1, seconds <= 60
-            {
-                lyrics.text = "ooo…"
-            }
-            if minutes >= 2, seconds >= 0 && minutes <= 2, seconds <= 4
-            {
-                lyrics.text = "ooo…"
-            }
-            if minutes >= 2, seconds >= 5 && minutes <= 2, seconds <= 9
-            {
-                lyrics.text = "Laskar pelangi"
-            }
-            if minutes >= 2, seconds >= 10 && minutes <= 2, seconds <= 15
-            {
-                lyrics.text = "Takkan terikat waktu"
-            }
-            if minutes >= 2, seconds >= 16 && minutes <= 2, seconds <= 20
-            {
-                lyrics.text = "Jangan berhenti mewarnai"
-            }
-            if minutes >= 2, seconds >= 21 && minutes <= 2, seconds <= 29
-            {
-                lyrics.text = "Jutaan mimpi di bumi"
-            }
-            if minutes >= 2, seconds >= 30 && minutes <= 2, seconds <= 34
-            {
-                lyrics.text = "O! menarilah dan terus tertawa"
-            }
-            if minutes >= 2, seconds >= 35 && minutes <= 2, seconds <= 39
-            {
-                lyrics.text = "Walau dunia tak seindah surga"
-            }
-            if minutes >= 2, seconds >= 40 && minutes <= 2, seconds <= 45
-            {
-                lyrics.text = "Bersyukurlah pada Yang Kuasa"
-            }
-            if minutes >= 2, seconds >= 46 && minutes <= 2, seconds <= 51
-            {
-                lyrics.text = "Cinta kita di dunia"
-            }
-            if minutes >= 2, seconds >= 52 && minutes <= 2, seconds <= 53
-            {
-                lyrics.text = ""
-            }
-            if minutes >= 2, seconds >= 54 && minutes <= 2, seconds <= 58
-            {
-                lyrics.text = "Menarilah dan terus tertawa"
-            }
-            if minutes >= 2, seconds >= 59 && minutes <= 3, seconds <= 4
-            {
-                lyrics.text = "Walau dunia tak seindah surga"
-            }
-            if minutes >= 3, seconds >= 5 && minutes <= 3, seconds <= 9
-            {
-                lyrics.text = "Bersyukurlah pada Yang Kuasa"
-            }
-            if minutes >= 3, seconds >= 10 && minutes <= 3, seconds <= 16
-            {
-                lyrics.text = "Cinta kita di dunia"
-            }
-            if minutes >= 3, seconds >= 17 && minutes <= 3, seconds <= 21
-            {
-                lyrics.text = "Selamanya"
-            }
-            if minutes >= 2, seconds >= 22 && minutes <= 3, seconds <= 27
-            {
-                lyrics.text = ""
-            }
-            if minutes >= 3, seconds >= 28 && minutes <= 3, seconds <= 32
-            {
-                lyrics.text = "Laskar pelangi"
-            }
-            if minutes >= 3, seconds >= 33 && minutes <= 3, seconds <= 39
-            {
-                lyrics.text = "Takkan terikat waktu"
-            }
-            if minutes >= 3, seconds >= 40 && minutes <= 3, seconds <= 45
-            {
-                lyrics.text = ""
-            }
+        switch (minutes, seconds) {
+            case (0,1): lyrics.text = "Lyric's here!"
+            case (0,3...5): lyrics.text = "Intro"
+            case (0,7...8): lyrics.text = "*"
+            case (0,9): lyrics.text = "* *"
+            case (0,10): lyrics.text = "* * *"
+            case (0,11...15): lyrics.text = "mimpi adalah kunci"
+            case (0,16...20): lyrics.text = "untuk kita menaklukkan dunia"
+            case (0,21...26): lyrics.text = "berlarilah tanpa lelah"
+            case (0,27...32): lyrics.text = "sampai engkau meraihnya"
+            case (0,32...36): lyrics.text = "laskar pelangi"
+            case (0,38...42): lyrics.text = "takkan terikat waktu"
+            case (0,43...47): lyrics.text = "bebaskan mimpimu di angkasa"
+            case (0,48...56): lyrics.text = "warnai bintang di jiwa"
+            case (0,57...60): lyrics.text = "menarilah dan terus tertawa"
+            case (1,0...1): lyrics.text = "menarilah dan terus tertawa"
+            case (1,2...6): lyrics.text = "walau dunia tak seindah surga"
+            case (1,7...11): lyrics.text = "bersyukurlah pada Yang Kuasa"
+            case (1,12...18): lyrics.text = "cinta kita di dunia"
+            case (1,19...22): lyrics.text = "selamanya"
+            case (1,23...30): lyrics.text = "(instrumen piano)"
+            case (1,32...35): lyrics.text = "cinta kepada hidup"
+            case (1,36...41): lyrics.text = "memberikan senyuman abadi"
+            case (1,42...46): lyrics.text = "walau hidup kadang tak adil"
+            case (1,47...53): lyrics.text = "tapi cinta lengkapi kita"
+            case (1,54...59): lyrics.text = "ooo"
+            case (2,1...5): lyrics.text = "ooo"
+            case (2,6...10): lyrics.text = "laskar pelangi"
+            case (2,11...15): lyrics.text = "takkan terikat waktu"
+            case (2,16...21): lyrics.text = "jangan berhenti mewarnai"
+            case (2,22...29): lyrics.text = "jutaan mimpi di bumi"
+            case (2,30): lyrics.text = "O!"
+            case (2,31...34): lyrics.text = "menarilah dan terus tertawa"
+            case (2,35...40): lyrics.text = "walau dunia tak seindah surga"
+            case (2,41...45): lyrics.text = "bersyukurlah pada Yang Kuasa"
+            case (2,46...51): lyrics.text = "cinta kita di dunia"
+            case (2,52...53): lyrics.text = "ooo"
+            case (2,54...58): lyrics.text = "menarilah dan terus tertawa"
+            case (2,59...60): lyrics.text = "walau dunia tak seindah surga"
+            case (3,0...4): lyrics.text = "walau dunia tak seindah surga"
+            case (3,5...9): lyrics.text = "bersyukurlah pada Yang Kuasa"
+            case (3,10...15): lyrics.text = "cinta kita di dunia"
+            case (3,17...20    ): lyrics.text = "selamanya"
+            case (3,22...25): lyrics.text = "selamanya"
+            case (3,29...33): lyrics.text = "laskar pelangi"
+            case (3,34...42): lyrics.text = "takkan terikat waktu"
+        default: lyrics.text = ""
+        }
+        
+            
         }
        
     /// - Tag: CreateEngine
@@ -336,15 +226,15 @@ class ViewController: UIViewController{
 //        audioPlayer?.currentTime = 0
 //        isPlaying = false
 //        waveView.stop()
-//           
+//
 //    }
     
     @objc func lyricsChange(switchState: UISwitch){
         if switchState.isOn{
-            lyricsSwitchLabel.text = "Lyrics is ON"
+            lyricsSwitchLabel.text = "lyrics is ON"
             lyrics.isHidden = false
         }else{
-            lyricsSwitchLabel.text = "Lyrics is OFF"
+            lyricsSwitchLabel.text = "lyrics is OFF"
             lyrics.isHidden = true
         }
     }
