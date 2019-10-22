@@ -16,6 +16,7 @@
 		ACAA9D2C2353248C00EA8BBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACAA9D2B2353248C00EA8BBA /* Assets.xcassets */; };
 		ACAA9D2F2353248C00EA8BBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACAA9D2D2353248C00EA8BBA /* LaunchScreen.storyboard */; };
 		ACAA9D372353288900EA8BBA /* Laskar Pelangi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = ACAA9D362353288900EA8BBA /* Laskar Pelangi.mp3 */; };
+		DC1C1667235EE5AC00549C0B /* Laskar Pelangi Trim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DC1C1666235EE5AC00549C0B /* Laskar Pelangi Trim.mp3 */; };
 		DC464A39235D971C0009D49D /* AHAP in Resources */ = {isa = PBXBuildFile; fileRef = DC464A38235D971C0009D49D /* AHAP */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		ACAA9D302353248C00EA8BBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACAA9D362353288900EA8BBA /* Laskar Pelangi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Laskar Pelangi.mp3"; sourceTree = "<group>"; };
 		B478F17743481FC9CC8EB1AB /* Pods-Simulasi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simulasi.debug.xcconfig"; path = "Target Support Files/Pods-Simulasi/Pods-Simulasi.debug.xcconfig"; sourceTree = "<group>"; };
+		DC1C1666235EE5AC00549C0B /* Laskar Pelangi Trim.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Laskar Pelangi Trim.mp3"; sourceTree = "<group>"; };
 		DC464A38235D971C0009D49D /* AHAP */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AHAP; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 				ACAA9D2D2353248C00EA8BBA /* LaunchScreen.storyboard */,
 				ACAA9D302353248C00EA8BBA /* Info.plist */,
 				ACAA9D362353288900EA8BBA /* Laskar Pelangi.mp3 */,
+				DC1C1666235EE5AC00549C0B /* Laskar Pelangi Trim.mp3 */,
 				ACAA9D282353248A00EA8BBA /* Simulasi.xcdatamodeld */,
 				ACAA9D1D2353248A00EA8BBA /* Products */,
 			);
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACAA9D2F2353248C00EA8BBA /* LaunchScreen.storyboard in Resources */,
+				DC1C1667235EE5AC00549C0B /* Laskar Pelangi Trim.mp3 in Resources */,
 				DC464A39235D971C0009D49D /* AHAP in Resources */,
 				ACAA9D2C2353248C00EA8BBA /* Assets.xcassets in Resources */,
 				ACAA9D372353288900EA8BBA /* Laskar Pelangi.mp3 in Resources */,
@@ -367,7 +371,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FN97V72AGN;
+				DEVELOPMENT_TEAM = 4H65A594JP;
 				INFOPLIST_FILE = Simulasi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -387,7 +391,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FN97V72AGN;
+				DEVELOPMENT_TEAM = 4H65A594JP;
 				INFOPLIST_FILE = Simulasi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
