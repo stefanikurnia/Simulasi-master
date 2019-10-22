@@ -67,12 +67,21 @@ class ViewController: UIViewController{
     
     @IBAction func playButton(_ sender: Any)
     {
+        if audioPlayer?.currentTime == 0.0{
+            audioPlayer?.pause()
+            playButtonOutlet.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+            isPlaying = false
+            waveView.stop()
+        }
+        
         if isPlaying
             {
                 audioPlayer?.pause()
                 playButtonOutlet.setImage(#imageLiteral(resourceName: "play"), for: .normal)
                 isPlaying = false
                 waveView.stop()
+                engine.stop(completionHandler: .none)
+                
             } else
             {
                 isPlaying = true
@@ -101,22 +110,26 @@ class ViewController: UIViewController{
             case (0,7...8): lyrics.text = "*"
             case (0,9): lyrics.text = "* *"
             case (0,10): lyrics.text = "* * *"
-            case (0,11...15): lyrics.text = "mimpi adalah kunci"
-            case (0,16...20): lyrics.text = "untuk kita menaklukkan dunia"
-            case (0,21...26): lyrics.text = "berlarilah tanpa lelah"
-            case (0,27...32): lyrics.text = "sampai engkau meraihnya"
-            case (0,32...36): lyrics.text = "laskar pelangi"
-            case (0,38...42): lyrics.text = "takkan terikat waktu"
-            case (0,43...47): lyrics.text = "bebaskan mimpimu di angkasa"
-            case (0,48...56): lyrics.text = "warnai bintang di jiwa"
-            case (0,57...60): lyrics.text = "menarilah dan terus tertawa"
-            case (1,0...1): lyrics.text = "menarilah dan terus tertawa"
-            case (1,2...6): lyrics.text = "walau dunia tak seindah surga"
-            case (1,7...11): lyrics.text = "bersyukurlah pada Yang Kuasa"
-            case (1,12...18): lyrics.text = "cinta kita di dunia"
-            case (1,19...22): lyrics.text = "selamanya"
-            case (1,23...30): lyrics.text = "(instrumen piano)"
-            case (1,31): waveView.stop()
+            case (0,11...15): lyrics.text = "Mimpi adalah kunci"
+            case (0,16...20): lyrics.text = "Untuk kita menaklukkan dunia"
+            case (0,21...26): lyrics.text = "Berlarilah tanpa lelah"
+            case (0,27...32): lyrics.text = "Sampai engkau meraihnya"
+            case (0,32...36): lyrics.text = "Laskar pelangi"
+            case (0,38...42): lyrics.text = "Takkan terikat waktu"
+            case (0,43...47): lyrics.text = "Bebaskan mimpimu di angkasa"
+            case (0,48...56): lyrics.text = "Warnai bintang di jiwa"
+            case (0,57...60): lyrics.text = "Menarilah dan terus tertawa"
+            case (1,0...1): lyrics.text = "Menarilah dan terus tertawa"
+            case (1,2...6): lyrics.text = "Walau dunia tak seindah surga"
+            case (1,7...11): lyrics.text = "Bersyukurlah pada Yang Kuasa"
+            case (1,12...18): lyrics.text = "Cinta kita di dunia"
+            case (1,19...22): lyrics.text = "Selamanya"
+            case (1,23...30): lyrics.text = "(Instrumen piano)"
+            case (1,32):
+                do {
+                    waveView.stop()
+                playButtonOutlet.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+                }
         default: lyrics.text = ""
         }
     }
@@ -206,10 +219,10 @@ class ViewController: UIViewController{
     
     @objc func lyricsChange(switchState: UISwitch){
         if switchState.isOn{
-            lyricsSwitchLabel.text = "lyrics is ON"
+            lyricsSwitchLabel.text = "lyric is ON"
             lyrics.isHidden = false
         }else{
-            lyricsSwitchLabel.text = "lyrics is OFF"
+            lyricsSwitchLabel.text = "lyric is OFF"
             lyrics.isHidden = true
         }
     }
@@ -217,8 +230,12 @@ class ViewController: UIViewController{
     @objc func vibrateChange(switchState: UISwitch){
         if switchState.isOn{
             vibrateSwitchLabel.text = "Vibrate is ON"
+            if audioPlayer?.isPlaying == true{
+                playHapticsFile(named: "AHAP/Laskar Pelangi")
+            }
         }else{
             vibrateSwitchLabel.text = "Vibrate is OFF"
+            engine.stop(completionHandler: .none)
         }
     }
 }
