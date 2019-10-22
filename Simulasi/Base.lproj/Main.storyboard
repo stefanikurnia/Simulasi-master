@@ -93,7 +93,7 @@
                                 <rect key="frame" x="165" y="777" width="90" height="90"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.18861857060000001" green="0.86020845170000004" blue="0.71763986349999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" image="play.circle" catalog="system">
+                                <state key="normal" image="play">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="47" scale="large" weight="thin"/>
                                 </state>
                                 <connections>
@@ -125,6 +125,6 @@
     </scenes>
     <resources>
         <image name="Album" width="268" height="268"/>
-        <image name="play.circle" catalog="system" width="64" height="60"/>
+        <image name="play" width="64" height="64"/>
     </resources>
 </document>
