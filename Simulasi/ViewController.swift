@@ -330,14 +330,14 @@ class ViewController: UIViewController{
     }
     
 
-    @IBAction func stopButton(_ sender: Any)
-    {
-        audioPlayer?.stop()
-        audioPlayer?.currentTime = 0
-        isPlaying = false
-        waveView.stop()
-           
-    }
+//    @IBAction func stopButton(_ sender: Any)
+//    {
+//        audioPlayer?.stop()
+//        audioPlayer?.currentTime = 0
+//        isPlaying = false
+//        waveView.stop()
+//           
+//    }
     
     @objc func lyricsChange(switchState: UISwitch){
         if switchState.isOn{
