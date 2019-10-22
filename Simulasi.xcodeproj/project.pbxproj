@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		336083EB220A84CB16B67E77 /* Pods_Simulasi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Simulasi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8671537C985C472B69CF61D /* Pods-Simulasi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Simulasi.release.xcconfig"; path = "Target Support Files/Pods-Simulasi/Pods-Simulasi.release.xcconfig"; sourceTree = "<group>"; };
-		ACAA9D1C2353248A00EA8BBA /* Simulasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simulasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACAA9D1C2353248A00EA8BBA /* VTune.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VTune.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACAA9D1F2353248A00EA8BBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACAA9D212353248A00EA8BBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ACAA9D232353248A00EA8BBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +79,7 @@
 		ACAA9D1D2353248A00EA8BBA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ACAA9D1C2353248A00EA8BBA /* Simulasi.app */,
+				ACAA9D1C2353248A00EA8BBA /* VTune.app */,
 			);
 			name = Products;
 			path = ..;
@@ -123,7 +123,7 @@
 			);
 			name = Simulasi;
 			productName = Simulasi;
-			productReference = ACAA9D1C2353248A00EA8BBA /* Simulasi.app */;
+			productReference = ACAA9D1C2353248A00EA8BBA /* VTune.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -379,7 +379,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = IOSDA.Simulasi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VTune;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -399,7 +399,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = IOSDA.Simulasi;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VTune;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
