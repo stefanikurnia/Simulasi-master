@@ -56,7 +56,7 @@ class ViewController: UIViewController{
     
     private func initializePlayer() -> AVAudioPlayer?
     {
-        guard let path = Bundle.main.path(forResource: "Laskar Pelangi", ofType: "mp3")
+        guard let path = Bundle.main.path(forResource: "Laskar Pelangi Trim", ofType: "mp3")
         else {
             return nil
         }
@@ -115,36 +115,34 @@ class ViewController: UIViewController{
             case (1,12...18): lyrics.text = "cinta kita di dunia"
             case (1,19...22): lyrics.text = "selamanya"
             case (1,23...30): lyrics.text = "(instrumen piano)"
-            case (1,32...35): lyrics.text = "cinta kepada hidup"
-            case (1,36...41): lyrics.text = "memberikan senyuman abadi"
-            case (1,42...46): lyrics.text = "walau hidup kadang tak adil"
-            case (1,47...53): lyrics.text = "tapi cinta lengkapi kita"
-            case (1,54...59): lyrics.text = "ooo"
-            case (2,1...5): lyrics.text = "ooo"
-            case (2,6...10): lyrics.text = "laskar pelangi"
-            case (2,11...15): lyrics.text = "takkan terikat waktu"
-            case (2,16...21): lyrics.text = "jangan berhenti mewarnai"
-            case (2,22...29): lyrics.text = "jutaan mimpi di bumi"
-            case (2,30): lyrics.text = "O!"
-            case (2,31...34): lyrics.text = "menarilah dan terus tertawa"
-            case (2,35...40): lyrics.text = "walau dunia tak seindah surga"
-            case (2,41...45): lyrics.text = "bersyukurlah pada Yang Kuasa"
-            case (2,46...51): lyrics.text = "cinta kita di dunia"
-            case (2,52...53): lyrics.text = "ooo"
-            case (2,54...58): lyrics.text = "menarilah dan terus tertawa"
-            case (2,59...60): lyrics.text = "walau dunia tak seindah surga"
-            case (3,0...4): lyrics.text = "walau dunia tak seindah surga"
-            case (3,5...9): lyrics.text = "bersyukurlah pada Yang Kuasa"
-            case (3,10...15): lyrics.text = "cinta kita di dunia"
-            case (3,17...20    ): lyrics.text = "selamanya"
-            case (3,22...25): lyrics.text = "selamanya"
-            case (3,29...33): lyrics.text = "laskar pelangi"
-            case (3,34...42): lyrics.text = "takkan terikat waktu"
+//            case (1,32...35): lyrics.text = "cinta kepada hidup"
+//            case (1,36...41): lyrics.text = "memberikan senyuman abadi"
+//            case (1,42...46): lyrics.text = "walau hidup kadang tak adil"
+//            case (1,47...53): lyrics.text = "tapi cinta lengkapi kita"
+//            case (1,54...59): lyrics.text = "ooo"
+//            case (2,1...5): lyrics.text = "ooo"
+//            case (2,6...10): lyrics.text = "laskar pelangi"
+//            case (2,11...15): lyrics.text = "takkan terikat waktu"
+//            case (2,16...21): lyrics.text = "jangan berhenti mewarnai"
+//            case (2,22...29): lyrics.text = "jutaan mimpi di bumi"
+//            case (2,30): lyrics.text = "O!"
+//            case (2,31...34): lyrics.text = "menarilah dan terus tertawa"
+//            case (2,35...40): lyrics.text = "walau dunia tak seindah surga"
+//            case (2,41...45): lyrics.text = "bersyukurlah pada Yang Kuasa"
+//            case (2,46...51): lyrics.text = "cinta kita di dunia"
+//            case (2,52...53): lyrics.text = "ooo"
+//            case (2,54...58): lyrics.text = "menarilah dan terus tertawa"
+//            case (2,59...60): lyrics.text = "walau dunia tak seindah surga"
+//            case (3,0...4): lyrics.text = "walau dunia tak seindah surga"
+//            case (3,5...9): lyrics.text = "bersyukurlah pada Yang Kuasa"
+//            case (3,10...15): lyrics.text = "cinta kita di dunia"
+//            case (3,17...20    ): lyrics.text = "selamanya"
+//            case (3,22...25): lyrics.text = "selamanya"
+//            case (3,29...33): lyrics.text = "laskar pelangi"
+//            case (3,34...42): lyrics.text = "takkan terikat waktu"
         default: lyrics.text = ""
         }
-        
-            
-        }
+    }
        
     /// - Tag: CreateEngine
        func createEngine() {
